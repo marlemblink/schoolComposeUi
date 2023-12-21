@@ -77,5 +77,6 @@ dependencies {
     //di
     implementation("io.insert-koin:koin-android:3.3.2")
     //nav
-    implementation("androidx.hilt:hilt-navigation-compose:1.0.0-alpha01")
+    implementation("androidx.navigation:navigation-compose:2.7.5")
+    //implementation("androidx.hilt:hilt-navigation-compose:1.0.0-alpha01")
 }

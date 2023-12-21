@@ -18,21 +18,18 @@ class MainVM constructor(private val repository: Repository): ViewModel() {
 
     init {
         getSchoolDataList()
-        getSchoolDetailList()
     }
     private fun getSchoolDataList() {
         viewModelScope.launch(Dispatchers.IO) {
             repository.getSchoolData().let {
-                Log.d("******", "call main data from MainVM")
                 dataList = it
             }
         }
     }
 
-    private fun getSchoolDetailList() {
+    fun getSchoolDetailList() {
         viewModelScope.launch(Dispatchers.IO) {
             repository.getSchoolDetailData().let {
-                Log.d("******", "call detail from MainVM")
                 dataDetailList = it
             }
         }
